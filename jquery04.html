@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+      <!-- jquery라이브러리-->
+      <script src="js/jquery.js"></script>
+</head>
+<body>
+    
+
+    <script>
+        // window.onload = function(){
+        //     document.getElementById("btn").onclick = function(){
+        //         alert("이벤트 실행됨");
+        //     }
+
+        //     document.getElementById("sel").onchange = function(){
+        //         alert("셀렉트 이벤트 실행됨");
+        //     }
+        // }
+
+        //위 구문을 jquery로 바꾸면??
+        $(document).ready(function(){
+            console.log($("#btn"));
+            $("#btn").click(function(){
+                alert("버튼이벤트 실행")
+            })
+
+        })
+
+        $(document).ready(function(){
+            $("#sel").change(function(){
+                alert("셀렉트 이벤트 실행");
+                console.log($(this).val());
+            })
+        })
+
+    </script>
+
+    <button type="button" id="btn">버튼</button>
+
+    <select id="sel">
+        <option>test1</option>
+        <option>test2</option>
+        <option>test3</option>
+
+    </select>
+
+
+</body>
+</html>

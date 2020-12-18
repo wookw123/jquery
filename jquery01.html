@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+      <!-- jquery라이브러리-->
+      <script src="js/jquery.js"></script>
+</head>
+<body>
+    <input type="text" id="apple" value = "우광우">
+    <input type="text" class="melon" value = "광숭이">
+    <input type="hidden" value = "광우걱이">
+
+    <script>
+        // var a1 = document.getElementById("apple");
+        // console.log(a1);
+
+        // var a2 = document.querySelector(".melon");
+        // console.log(a2);
+
+        // var a3 =document.querySelector("input[type = 'hidden']");
+        // console.log(a3);
+
+
+        //jquery는 $("선택자")를 통해서 요소를 얻으면, 반환으로 객체를 돌려줍니다
+        //$("선택자")[인덱스번호]로 태그를 얻을수 있다
+        //결론적으로 $("선택자").제이쿼리 함수를 통해 취할 값을 가져옵니다
+
+
+        var a1 = $("#apple")[0];
+        console.log(a1);
+
+        var a2 = $("#apple");
+        console.log(a1);
+
+        var a3 = $("#apple").val();
+        console.log(a1);
+
+        var b1 = $(".melon").val();
+        console.log(b1);
+
+        var c1 = $("input='hidden'").val();
+        console.log(c1);
+
+        //값을 변경하기. var(변경할 값)
+
+        $("#apple").val("바꾼값"); //jquery방식
+
+    </script>
+  
+</body>
+</html>
